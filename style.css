@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --bg-main: #F8FAFC; /* Gris très clair (fond) */
+    --card-bg: #FFFFFF; /* Blanc pur pour les cartes */
+    --border-color: #E2E8F0; /* Gris clair pour les bordures */
+    --text-main: #1E293B; /* Bleu très foncé (presque noir) pour le texte */
+    --text-muted: #64748B; /* Gris pour les sous-titres */
+    --primary: #0056D2; /* Bleu industriel */
+}
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Fond principal */
+.stApp { background-color: var(--bg-main); }
+
+/* Barre latérale */
+[data-testid="stSidebar"] {
+    background-color: var(--card-bg);
+    border-right: 1px solid var(--border-color);
+}
+[data-testid="stSidebar"] * {
+    color: var(--text-main) !important;
+}
+
+/* Titres */
+h1, h2, h3, h4 {
+    color: var(--text-main) !important;
+    font-weight: 700;
+}
+
+/* Cartes de métriques */
+[data-testid="stMetric"] {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Ombre légère */
+}
+[data-testid="stMetricLabel"] {
+    color: var(--text-muted) !important;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+[data-testid="stMetricValue"] {
+    color: var(--text-main) !important;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Boutons */
+.stButton > button {
+    background-color: var(--primary);
+    color: white !important;
+    border-radius: 6px;
+    font-weight: 600;
+    border: none;
+}
+.stButton > button:hover { background-color: #003A8C; }
+
+/* Alertes */
+.stAlert {
+    background-color: var(--card-bg) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border-color);
+}
+
+/* Badges (PASS/FAIL) */
+.badge-pass {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 1px solid #10B981;
+}
+.badge-fail {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 1px solid #EF4444;
+}
